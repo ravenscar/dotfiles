@@ -1,6 +1,9 @@
 path+=(~/bin)
 path+=(~/.sst/bin)
 path+=(~/go/bin)
+path+=(/opt/nvim-linux64/bin)
+path+=(/usr/local/go/bin)
+path+=(/usr/local/node/bin)
 
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
