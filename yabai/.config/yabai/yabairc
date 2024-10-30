@@ -30,3 +30,4 @@ yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^Alacritty$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^VLC$" manage=off
