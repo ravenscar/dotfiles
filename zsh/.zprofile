@@ -14,3 +14,26 @@ fi
 
 alias vim=nvim
 alias vi=nvim
+
+function jump() {
+    if [ -z "$1" ]; then
+        echo "Usage: jump <subdomain> [command]"
+        return 1
+    fi
+
+    local subdomain="$1"
+    shift
+
+    # The remaining arguments (if any) are taken as the command to run
+    if [ -z "$1" ]; then
+        ssh -t "paul.nilsson@jumpbox.pnilsson.cd.$subdomain.dn.smokeball.com" "resume"
+    else
+        ssh -t "paul.nilsson@jumpbox.pnilsson.cd.$subdomain.dn.smokeball.com" "$@"
+    fi
+}
+
+alias jumpau='ssh paul.nilsson@jumpbox.pnilsson.cd.aus.dn.smokeball.com'
+alias jumpus='ssh paul.nilsson@jumpbox.pnilsson.cd.nova.dn.smokeball.com'
+alias jumpuk='ssh paul.nilsson@jumpbox.pnilsson.cd.lon.dn.smokeball.com'
+alias pdntmp='ssh -i "~/.ssh/pauln-dev-aus.pem" ubuntu@10.132.14.213 -t "tmux attach || tmux new"'
+alias bee='ssh -t bee.local "tmux attach | tmux new"'
