@@ -16,3 +16,6 @@ style = "Italic"
 [font.normal]
 family = "JetbrainsMono Nerd Font"
 style = "Regular"
+
+[window]
+option_as_alt = "OnlyLeft"

@@ -38,5 +38,5 @@ alias jumpuk='ssh paul.nilsson@jumpbox.pnilsson.cd.lon.dn.smokeball.com'
 alias pdntmp='ssh -i "~/.ssh/pauln-dev-aus.pem" ubuntu@10.132.14.213 -t "tmux attach || tmux new"'
 alias bee='ssh bee.local'
 alias shipit='ssh -i "~/.ssh/shipit-2024.pem" ubuntu@ec2-3-106-226-162.ap-southeast-2.compute.amazonaws.com'
-
 export DEV_ID=PN3
+alias retro='ssh pi@192.168.1.252'
