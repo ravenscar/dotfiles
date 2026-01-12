@@ -1,2 +1,3 @@
 macos-option-as-alt = left
 font-size = 18
+shell-integration-features = ssh-terminfo,ssh-env
