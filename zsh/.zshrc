@@ -5,6 +5,10 @@ path+=(/opt/nvim-linux64/bin)
 path+=(/usr/local/go/bin)
 path+=(/usr/local/node/bin)
 
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt APPEND_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
@@ -16,7 +20,7 @@ autoload -Uz vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '%b '
 setopt PROMPT_SUBST
-PROMPT='%(?..%F{red}✘ %f)%F{blue}%~%f %F{green}>%f '
+PROMPT='%F{yellow}[%m] %(?..%F{red}✘ %f)%F{blue}%~%f %F{green}>%f '
 RPROMPT='%F{magenta}${vcs_info_msg_0_}%f'
 
 bindkey -s ^f "tmux-sessionizer\n"
@@ -40,3 +44,7 @@ function yy() {
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+export PATH="$HOME/.local/bin:$PATH"
+
+. ~/.zprofile

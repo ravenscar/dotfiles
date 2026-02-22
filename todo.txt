@@ -7,4 +7,5 @@ brew install --cask font-jetbrains-mono-nerd-font
 various tweaks need to be done to get yabai running:
 https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
 
+don't forget to clone tpm: git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 need to manually install tmux plugins: <leader> I
