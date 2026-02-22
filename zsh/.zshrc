@@ -38,6 +38,8 @@ function yy() {
 # opam configuration
 [[ ! -r /Users/pnilsson/.opam/opam-init/init.zsh ]] || source /Users/pnilsson/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
+alias emacs="emacs -nw"
+
 # bun completions
 [ -s "/Users/paulnilsson/.bun/_bun" ] && source "/Users/paulnilsson/.bun/_bun"
 
