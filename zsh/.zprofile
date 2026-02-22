@@ -37,6 +37,6 @@ function jump() {
 alias jumpau='ssh paul.nilsson@jumpbox.pnilsson.cd.aus.dn.smokeball.com'
 alias jumpus='ssh paul.nilsson@jumpbox.pnilsson.cd.nova.dn.smokeball.com'
 alias jumpuk='ssh paul.nilsson@jumpbox.pnilsson.cd.lon.dn.smokeball.com'
-alias bee='ssh bee.local'
+lo() { ssh "$1.local" }
 export DEV_ID=PN3
 alias retro='ssh pi@192.168.1.252'
