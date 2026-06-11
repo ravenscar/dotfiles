@@ -36,17 +36,23 @@ function yy() {
 }
 
 # opam configuration
-[[ ! -r /Users/pnilsson/.opam/opam-init/init.zsh ]] || source /Users/pnilsson/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+[[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 alias emacs="emacs -nw"
 
 # bun completions
-[ -s "/Users/paulnilsson/.bun/_bun" ] && source "/Users/paulnilsson/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
 export PATH="$HOME/.local/bin:$PATH"
+
+# opencode
+export PATH=$HOME/.opencode/bin:$PATH
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:$HOME/.lmstudio/bin"
+# End of LM Studio CLI section
 
 . ~/.zprofile

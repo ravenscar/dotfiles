@@ -2,7 +2,7 @@
 # original from https://github.com/ThePrimeagen/.dotfiles/blob/master/bin/.local/scripts/tmux-sessionizer
 
 # prune all search dirs down to ones that exist on this system
-allDirs=(~/code/experiments ~/code/personal ~/code/experiments ~/code ~/code/international/applications/addins/office ~/Document ~)
+allDirs=(~/code/experiments ~/code/personal ~/code/github ~/code ~/code/international/applications/addins/office ~/Document ~)
 existingDirs=()
 for d in ${allDirs[@]}; do
   if [ -d $d ]; then
