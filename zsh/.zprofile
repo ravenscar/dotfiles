@@ -16,27 +16,6 @@ alias vim=nvim
 alias vi=nvim
 alias v=nvim
 alias lg=lazygit
-
-function jump() {
-    if [ -z "$1" ]; then
-        echo "Usage: jump <subdomain> [command]"
-        return 1
-    fi
-
-    local subdomain="$1"
-    shift
-
-    # The remaining arguments (if any) are taken as the command to run
-    if [ -z "$1" ]; then
-        ssh -t "paul.nilsson@jumpbox.pnilsson.cd.$subdomain.dn.smokeball.com" "resume"
-    else
-        ssh -t "paul.nilsson@jumpbox.pnilsson.cd.$subdomain.dn.smokeball.com" "$@"
-    fi
-}
-
-alias jumpau='ssh paul.nilsson@jumpbox.pnilsson.cd.aus.dn.smokeball.com'
-alias jumpus='ssh paul.nilsson@jumpbox.pnilsson.cd.nova.dn.smokeball.com'
-alias jumpuk='ssh paul.nilsson@jumpbox.pnilsson.cd.lon.dn.smokeball.com'
-alias bee='ssh bee.local'
-export DEV_ID=PN3
 alias retro='ssh pi@192.168.1.252'
+export PATH="$HOME/.local/bin:$PATH"
+source ~/.local/state/bitbucket/env.sh
