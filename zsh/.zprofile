@@ -18,4 +18,4 @@ alias v=nvim
 alias lg=lazygit
 alias retro='ssh pi@192.168.1.252'
 export PATH="$HOME/.local/bin:$PATH"
-source ~/.config/shell/local.sh
+[ -f ~/.config/shell/local.sh ] && source ~/.config/shell/local.sh

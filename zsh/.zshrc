@@ -23,6 +23,28 @@ setopt PROMPT_SUBST
 PROMPT='%F{yellow}[%m] %(?..%F{red}✘ %f)%F{blue}%~%f %F{green}>%f '
 RPROMPT='%F{magenta}${vcs_info_msg_0_}%f'
 
+bindkey -v
+export KEYTIMEOUT=1
+
+bindkey '^R' history-incremental-search-backward
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
+bindkey '^W' backward-kill-word
+bindkey '^?' backward-delete-char
+
+zle-keymap-select() {
+  case $KEYMAP in
+    vicmd) printf '\e[2 q' ;;
+    main|viins) printf '\e[6 q' ;;
+  esac
+}
+zle-line-init() { printf '\e[6 q'; }
+zle -N zle-keymap-select
+zle -N zle-line-init
+
+export EDITOR=vim
+export VISUAL=vim
+
 bindkey -s ^f "tmux-sessionizer\n"
 bindkey -s ^z " fg\n"
 
